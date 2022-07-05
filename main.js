@@ -3,7 +3,8 @@ const btnDropDown = document.querySelectorAll(".dropdownEffect");
 const drop1 = document.querySelector(".dropdown");
 const drop2 = document.querySelector(".addDropDown1");
 const close1 = document.querySelector(".closMenue");
-const item1 = document.querySelector("nav");
+const item1 = document.querySelector(".navOuter");
+const item2 = document.querySelector("nav");
 const open1 = document.querySelector(".menuscreen");
 console.log(open1);
 btnDropDown.forEach(function (b, i) {
@@ -17,15 +18,15 @@ btnDropDown.forEach(function (b, i) {
   });
 });
 
-open1.addEventListener("click", function () {
-  console.log("click");
-  item1.style.display = "block";
-  close1.style.opacity = 1;
-  open1.style.zIndex = 1000000000000;
-});
-
-close1.addEventListener("click", function () {
-  item1.style.display = "none";
-  close1.style.opacity = 0;
-  close1.style.zIndex = 100;
-});
+const mobiledropOpen = function (e) {
+  item2.classList.remove("active");
+  item1.classList.add("isActive");
+  close1.classList.remove("active");
+};
+open1.addEventListener("click", mobiledropOpen);
+const removingMenu = function (e) {
+  item2.classList.add("active");
+  item1.classList.remove("isActive");
+  close1.classList.add("active");
+};
+close1.addEventListener("click", removingMenu);
