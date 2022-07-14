@@ -10,6 +10,10 @@
 a {
   color: hsl(0, 0%, 41%);
 }
+a:hover {
+  color: hsl(0, 0%, 8%);
+  transition: all 0.5;
+}
 h1 {
   color: hsl(0, 0%, 8%);
   font-weight: 900;
@@ -36,11 +40,17 @@ nav {
   width: 1050px;
   margin: auto;
   margin-left: 50px;
+  transition: all 1s;
 }
 .flex-items {
   display: flex;
   justify-content: space-between;
   gap: 50px;
+}
+
+nav a:hover {
+  color: hsl(0, 0%, 8%);
+  transition: all 1s;
 }
 
 .link-f {
@@ -192,14 +202,7 @@ nav {
     display: flex;
     flex-direction: column;
     z-index: 10000;
-    height: 100vh;
-  }
-  .navOuter.isActive {
-    background: linear-gradient(
-      to right,
-      #525050 0%,
-      rgba(233, 233, 233, 0) 150%
-    );
+    height: 150vh;
   }
   nav {
     flex-direction: column;
@@ -212,7 +215,7 @@ nav {
     padding-top: 80px;
     padding-right: 100px;
     margin-left: 125px;
-    height: 100vh;
+    height: 120vh;
     transition: all 0.5s ease;
   }
   .active {
@@ -228,7 +231,7 @@ nav {
     height: 100px;
     top: 0px;
     left: 300px;
-    z-index: 2100;
+    z-index: 21000;
     transition: all 0.5s ease;
   }
 
@@ -258,6 +261,7 @@ nav {
     height: 20px;
     top: 10px;
     left: 300px;
+    transition: all 0.5s ease;
   }
 
   .displayFloat1 {
@@ -334,11 +338,9 @@ nav {
     position: absolute;
     right: 0px;
     margin-bottom: 0px 0px 3rem 0px;
-    z-index: 4;
   }
   .mainArrange {
     position: relative;
-    /* margin-top: 500px; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -375,6 +377,12 @@ nav {
     text-align: center;
     padding-top: 500px;
     padding-bottom: 0px;
+    transition: all 1s;
+  }
+  .writtenPart.isActive {
+    background: black;
+    opacity: 0.7;
+    transition: all 1s;
   }
   .button-link {
     background: hsl(0, 0%, 8%);

@@ -3,7 +3,7 @@ const btnDropDown = document.querySelectorAll(".dropdownEffect");
 const drop1 = document.querySelector(".dropdown");
 const drop2 = document.querySelector(".addDropDown1");
 const close1 = document.querySelector(".closMenue");
-const item1 = document.querySelector(".navOuter");
+const item1 = document.querySelector(".writtenPart");
 const item2 = document.querySelector("nav");
 const open1 = document.querySelector(".menuscreen");
 console.log(open1);
